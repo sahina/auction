@@ -2,6 +2,8 @@ defmodule Auction.Item do
   import Ecto.Changeset
   use Ecto.Schema
 
+  alias Auction.Item
+
   schema "items" do
     field(:title, :string)
     field(:description, :string)
@@ -9,7 +11,7 @@ defmodule Auction.Item do
     timestamps()
   end
 
-  def changeset(item, params \\ %{}) do
+  def changeset(%Item{} = item, params \\ %{}) do
     item
     |> cast(params, [:title, :description, :ends_at])
     |> validate_required(:title)
