@@ -1,5 +1,12 @@
 use Mix.Config
 
+config :auction, Auction.Repo,
+  database: "auction_dev",
+  username: "postgres",
+  password: "postgres",
+  hostname: "localhost",
+  port: "5432"
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #

@@ -11,6 +11,8 @@ import Config
 
 config :phoenix, :json_library, Jason
 
+config :auction, ecto_repos: [Auction.Repo]
+
 config :auction_web,
   generators: [context_app: false]
 
