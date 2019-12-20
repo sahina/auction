@@ -4,7 +4,6 @@ defmodule AuctionWeb.PageController do
   alias Auction
 
   def index(conn, _params) do
-    items = Auction.list_items
-    render(conn, "index.html", items: items)
+    render(conn, "index.html")
   end
 end
